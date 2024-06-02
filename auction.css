@@ -1,0 +1,235 @@
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Header styling */
+header {
+    background-color: #450a0a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #292929;
+    font-size: 2em;
+    border-bottom: 2px solid #292929;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Auction items styling */
+.auction-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.auction-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.auction-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+}
+
+.auction-item a {
+    color: #292929;
+    text-decoration: none;
+}
+
+.auction-item img {
+    width: 200px; /* Set fixed width for the image */
+    height: 200px; /* Set fixed height for the image */
+    object-fit: cover; /* Ensure the entire image is visible */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+}
+
+.auction-item h3 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.current-bid {
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    padding: 15px 0;
+    margin-top: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+.current-bid p {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #666;
+}
+
+.bid-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.bid-button:hover {
+    background-color: #45a049;
+}
+
+/* Bid history table styling */
+.bid-history {
+    margin-top: 40px;
+}
+
+.bid-history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bid-history th, .bid-history td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.bid-history th {
+    background-color: #f2f2f2;
+    color: #292929;
+}
+
+.bid-history td {
+    background-color: #fff;
+}
+
+/* Footer styling */
+footer {
+    background-color: #292929;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Adjust width of the modal */
+    max-width: 400px; /* Set maximum width of the modal */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+    text-align: center; /* Center text and elements */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#bidAmount {
+    width: calc(100% - 42px); /* Adjust width of the input box */
+    padding: 10px; /* Increase padding for better visibility */
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+    border: 1px solid #ccc; /* Add border for input box */
+    border-radius: 5px; /* Add border radius for input box */
+}
+
+#bidForm input[type="submit"] {
+    width: 150px; /* Set width of the button */
+    padding: 10px; /* Increase padding for better appearance */
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add border radius for button */
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+#bidForm input[type="submit"]:hover {
+    background-color: #45a049; /* Darker background color on hover */
+}
